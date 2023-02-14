@@ -1,1 +1,1 @@
-# JavaScript-Programms
+# JavaScript programms

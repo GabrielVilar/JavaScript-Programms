@@ -6,7 +6,7 @@
 
 //Here we have our variables
 const prompt = require('prompt-sync')();
-console.log("Input your grades below:");
+console.info("Input your grades below:");
 var numberA = Number(prompt("First grade: "));
 var numberB = Number(prompt("Second grade: "));
 var numberC = Number(prompt("Third grade: "));

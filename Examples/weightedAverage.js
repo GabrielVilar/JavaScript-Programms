@@ -22,9 +22,12 @@ function weightedAverage(grade1, grade2, grade3){
    if your weighted average is greater than 7 you passed 
    else you don't. 
 */
-var end = "you Failed";
-if(result > 7){
-   var end = "you Passed";
+
+let end = "you Passed";
+if(result < 5){
+    end = "you Failed";
+}else if(result < 7){
+    end = "you have to do the final exam";
 }
 
 console.log(`The result of the weighted average is ${result} ${end}`);

@@ -14,7 +14,8 @@ const prompt = require('prompt-sync')();
 var numberA = Number(prompt("Enter the first number: "));
 var numberB = Number(prompt("Enter the second number: "));
 var operationC = prompt("Enter the operation to perform (+, -, *, /, %): ");
-//% é o resto da divisão
+/* "%" is the symbol of the remainder of the division, used to find out 
+if the number is even or odd*/
 
 var result = Math(numberA, numberB, operationC);
 //Creating essential Math functions that include four operations

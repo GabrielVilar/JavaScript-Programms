@@ -6,7 +6,8 @@
 
 //Here we have our variables
 const prompt = require('prompt-sync')();
-var numberA = Number(prompt("Input your grades below:\nFirst grade: "));
+console.log("Input your grades below:");
+var numberA = Number(prompt("First grade: "));
 var numberB = Number(prompt("Second grade: "));
 var numberC = Number(prompt("Third grade: "));
 
@@ -16,8 +17,17 @@ function weightedAverage(grade1, grade2, grade3){
    result = (grade1 * 3 + grade2 * 3 + grade3 * 4)/10;
    return result;
 }
+/* 
+      A statement that determines if you passed or you failed, 
+   if your weighted average is greater than 7 you passed 
+   else you don't. 
+*/
+var end = "you Failed";
+if(result > 7){
+   var end = "you Passed";
+}
 
-console.log(`The result of the weighted average is ${result}`);
+console.log(`The result of the weighted average is ${result} ${end}`);
 
 /*
    The function 'weightedAverage' takes in three arguments,

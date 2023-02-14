@@ -13,7 +13,8 @@
 const prompt = require('prompt-sync')();
 var numberA = Number(prompt("Enter the first number: "));
 var numberB = Number(prompt("Enter the second number: "));
-var operationC = prompt("Enter the operation to perform (+, -, *, /): ");
+var operationC = prompt("Enter the operation to perform (+, -, *, /, %): ");
+//% é o resto da divisão
 
 var result = Math(numberA, numberB, operationC);
 //Creating essential Math functions that include four operations
@@ -29,6 +30,9 @@ function Math(number1, number2, operation){
         return (result);
     }else if(operation === "/"){
         result = number1 / number2;
+        return (result);
+    }else if(operation === "%"){
+        result = number1 % number2;
         return (result);
     }else{
         console.log("Invalid operation entered.");

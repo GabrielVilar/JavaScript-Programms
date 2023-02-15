@@ -6,12 +6,13 @@
 
 //Here we have our variables
 const prompt = require('prompt-sync')();
-console.info("Input your grades below:");
+var name = prompt("Hi, what's your name? ");
+console.info(`${name} input your grades below:`);
 var numberA = Number(prompt("First grade: "));
 var numberB = Number(prompt("Second grade: "));
 var numberC = Number(prompt("Third grade: "));
 console.info("Input the number of absences in the semester below:");
-var numberD = Number(prompt("Absences: "));
+var Absences = Number(prompt("Absences: "));
 
 var result = weightedAverage(numberA, numberB, numberC);
 
@@ -25,10 +26,10 @@ function weightedAverage(grade1, grade2, grade3){
    else you don't. 
 */
 
-let end = "you Passed.";
+let end = `congratulations ${name}, you Passed!`;
 if(result < 5){
     end = "you Failed.";
-}else if(numberD > 10){
+}else if(Absences > 10){
    end = "you Failed, you have more than ten absences.";
 }else if(result < 7){
     end = "you have to do the final exam.";

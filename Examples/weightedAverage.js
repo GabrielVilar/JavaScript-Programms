@@ -10,6 +10,8 @@ console.info("Input your grades below:");
 var numberA = Number(prompt("First grade: "));
 var numberB = Number(prompt("Second grade: "));
 var numberC = Number(prompt("Third grade: "));
+console.info("Input the number of absences in the semester below:");
+var numberD = Number(prompt("Absences: "));
 
 var result = weightedAverage(numberA, numberB, numberC);
 
@@ -23,11 +25,13 @@ function weightedAverage(grade1, grade2, grade3){
    else you don't. 
 */
 
-let end = "you Passed";
+let end = "you Passed.";
 if(result < 5){
-    end = "you Failed";
+    end = "you Failed.";
+}else if(numberD > 10){
+   end = "you Failed, you have more than ten absences.";
 }else if(result < 7){
-    end = "you have to do the final exam";
+    end = "you have to do the final exam.";
 }
 
 console.log(`The result of the weighted average is ${result} ${end}`);

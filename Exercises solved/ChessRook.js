@@ -8,3 +8,25 @@ If you pass positionTower=11 and positionAdversary=22, the function should retur
 Remark:
 the position of the pieces will be given in the format "xy" where x represents the row the piece is in and y the column the piece is in, i.e. position "12" means the piece is in the 1st row and in the 2nd column
 */
+const prompt = require('prompt-sync')();
+
+var positionTower = Number(prompt("The position of the tower: "));
+var positionAdversary = Number(prompt("The position of the adversary:"));
+
+function canCapture(positionTower, positionAdversary){
+    
+    let positionTowerX = Math.floor(positionTower / 10);
+    let positionTowerY = positionTower % 10;
+    let positionAdversaryX = Math.floor(positionAdversary / 10);
+    let positionAdversaryY = positionAdversary % 10;
+
+    //Check if the pieces are on the same row or column
+    if((positionTowerX === positionAdversaryX) || 
+      (positionTowerY === positionAdversaryY)){
+        return "Yes";
+    }else{
+        return "No";
+    }
+}
+
+console.log(canCapture(positionTower, positionAdversary));
